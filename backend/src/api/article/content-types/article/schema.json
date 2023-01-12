@@ -5,12 +5,13 @@
     "singularName": "article",
     "pluralName": "articles",
     "displayName": "Article",
-    "name": "article"
+    "name": "article",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -20,7 +21,8 @@
     },
     "description": {
       "type": "text",
-      "required": true
+      "required": true,
+      "default": "Andrew builds in public"
     },
     "content": {
       "type": "richtext",
@@ -38,17 +40,24 @@
       "inversedBy": "articles"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::writer.writer",
       "inversedBy": "articles"
+    },
+    "linkedinurl": {
+      "type": "string"
+    },
+    "linkedinpostdate": {
+      "type": "string"
     }
   }
 }
