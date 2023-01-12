@@ -2,12 +2,12 @@ import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout"
-import NextImage from "../../components/image"
+// import NextImage from "../../components/image"
 import Seo from "../../components/seo"
-import { getStrapiMedia } from "../../lib/media"
+// import { getStrapiMedia } from "../../lib/media"
 
 const Article = ({ article, categories }) => {
-  const imageUrl = getStrapiMedia(article.attributes.image)
+  // const imageUrl = getStrapiMedia(article.attributes.image)
 
   const seo = {
     metaTitle: article.attributes.title,
@@ -22,8 +22,8 @@ const Article = ({ article, categories }) => {
       <div
         id="banner"
         className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
-        data-src={imageUrl}
-        data-srcset={imageUrl}
+        // data-src={imageUrl}
+        // data-srcset={imageUrl}
         data-uk-img
       >
         <h1>{article.attributes.title}</h1>
@@ -36,11 +36,11 @@ const Article = ({ article, categories }) => {
           />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            <div>
+            {/* <div>
               {article.attributes.author.picture && (
                 <NextImage image={article.attributes.author.picture} />
               )}
-            </div>
+            </div> */}
             <div className="uk-width-expand">
               <p className="uk-margin-remove-bottom">
                 By {article.attributes.author.name}
