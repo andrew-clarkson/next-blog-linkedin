@@ -73,7 +73,7 @@ const Articles = ({ articles }) => {
           })}
         </div>
         <div>
-          <div className="" data-uk-grid>
+          <div className="" data-uk-grid margin="0">
             {rightArticles.map((article, i) => {
               return (
                 <Card

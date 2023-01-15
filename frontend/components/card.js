@@ -9,7 +9,7 @@ const Card = ({ article }) => {
     <Link href={`/article/${article.attributes.slug}`}>
       <a className="uk-link-reset">
         <div className="uk-card uk-card-muted min-height">
-          <div className="uk-card-body">
+          <div className="">
             <p id="title" className="uk-text-large">
               {article.attributes.title}
             </p>
