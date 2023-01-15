@@ -83,6 +83,9 @@ img:hover {
 }
 
 .min-height {
-  min-height: 250px
+  min-height: 250px;
 }
 
+.make-narrow {
+  max-width: 700px;
+}

@@ -23,7 +23,6 @@ const Articles = ({ articles }) => {
           </p>
           <ul className="uk-list-disc uk-margin-remove-top">
             <li>
-              {"Daily Junior Developer Advice on "}
               <a href="https://www.linkedin.com/in/andrewtclarkson/">
                 My LinkedIn
               </a>
@@ -43,9 +42,8 @@ const Articles = ({ articles }) => {
               {" (every other Thursday @7pm)"}
             </li>
             <li>
-              {"Work with me to land the job quicker "}
               <a href="https://introwise.com/andrew-clarkson">
-                Tech Job Seeker Coaching
+                Land your first Developer role quicker!
               </a>
             </li>
           </ul>

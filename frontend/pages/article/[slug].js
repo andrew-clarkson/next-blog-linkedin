@@ -29,7 +29,7 @@ const Article = ({ article, categories }) => {
         <h1>{article.attributes.title}</h1>
       </div>
       <div className="uk-section">
-        <div className="uk-container ">
+        <div className="uk-container uk-container-large uk-margin-remove-right uk-margin-remove-left make-narrow">
           <ReactMarkdown
             source={article.attributes.content}
             escapeHtml={false}
