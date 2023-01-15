@@ -2,13 +2,9 @@ import ReactMarkdown from "react-markdown"
 import Moment from "react-moment"
 import { fetchAPI } from "../../lib/api"
 import Layout from "../../components/layout"
-// import NextImage from "../../components/image"
 import Seo from "../../components/seo"
-// import { getStrapiMedia } from "../../lib/media"
 
 const Article = ({ article, categories }) => {
-  // const imageUrl = getStrapiMedia(article.attributes.image)
-
   const seo = {
     metaTitle: article.attributes.title,
     metaDescription: article.attributes.description,
@@ -19,17 +15,11 @@ const Article = ({ article, categories }) => {
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
-      <div
-        id="banner"
-        className="uk-container uk-container-large"
-        // data-src={imageUrl}
-        // data-srcset={imageUrl}
-        data-uk-img
-      >
+      <div id="banner" className="uk-container uk-container-large" data-uk-img>
         <h1>{article.attributes.title}</h1>
       </div>
-      <div className="uk-section">
-        <div className="uk-container uk-container-large uk-margin-remove-right uk-margin-remove-left make-narrow">
+      <div className="uk-section uk-padding-remove-top">
+        <div className="uk-container uk-container-large uk-margin-remove make-narrow">
           <ReactMarkdown
             source={article.attributes.content}
             escapeHtml={false}

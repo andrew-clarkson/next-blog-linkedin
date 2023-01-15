@@ -7,18 +7,6 @@ h1 {
   font-size: 120px;
 }
 
-.uk-navbar-container {
-  margin-left: 25px;
-  margin-right: 25px
-}
-
-@media only screen and (max-width: 960px) {
-  .uk-navbar-container {
-    margin-left: 15px;
-    margin-right: 15px
-  }
-}
-
 @media only screen and (max-width: 750px) {
   h1 {
     font-size: 75px
@@ -28,25 +16,6 @@ h1 {
 @media only screen and (max-width: 450px) {
   h1 {
     font-size: 50px
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  .uk-navbar-container {
-    margin-left: 0;
-    margin-right: 0
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .two-col {
-    display: none
-  }
-}
-
-@media only screen and (min-width: 801px) {
-  .one-col {
-    display: none
   }
 }
 
@@ -72,15 +41,41 @@ h1 {
   line-height: 1.75;
 }
 
+.uk-container>:last-child {
+ margin-bottom: 20;
+}
 
 .uk-navbar-container {
+  margin-left: 25px;
+  margin-right: 25px;
   background: #fff !important;
   font-family: Staatliches;
 }
 
-img:hover {
-  opacity: 1;
-  transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+@media only screen and (max-width: 960px) {
+  .uk-navbar-container {
+    margin-left: 15px;
+    margin-right: 15px
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .uk-navbar-container {
+    margin-left: 0;
+    margin-right: 0
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .two-col {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .one-col {
+    display: none
+  }
 }
 
 .min-height {
