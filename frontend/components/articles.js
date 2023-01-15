@@ -3,12 +3,11 @@ import Card from "./card"
 
 const Articles = ({ articles }) => {
   articles.sort((a, b) => a.id - b.id).reverse()
-  const leftArticlesCount = Math.ceil(articles.length / 5)
   const leftArticles = articles.filter((article) => article.id % 2 === 0)
   const rightArticles = articles.filter((article) => article.id % 2 !== 0)
 
   const welcome = (
-    <div className="uk-margin-xlarge-bottom">
+    <div>
       <div className="uk-child-width-1-2@s" data-uk-grid="true">
         <div>
           <p className="uk-text-bold">

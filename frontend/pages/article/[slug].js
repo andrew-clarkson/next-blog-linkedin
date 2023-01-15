@@ -21,7 +21,7 @@ const Article = ({ article, categories }) => {
       <Seo seo={seo} />
       <div
         id="banner"
-        className="uk-height-medium uk-flex uk-container uk-flex-middle uk-margin"
+        className="uk-container uk-container-large"
         // data-src={imageUrl}
         // data-srcset={imageUrl}
         data-uk-img
