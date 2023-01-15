@@ -8,15 +8,14 @@ const Articles = ({ articles }) => {
   const rightArticles = articles.filter((article) => article.id % 2 !== 0)
 
   const welcome = (
-    <div>
+    <div className="uk-margin-xlarge-bottom">
       <div className="uk-child-width-1-2@s" data-uk-grid="true">
         <div>
           <p className="uk-text-bold">
-            Welcome! I will be using this space to repost my writing from
-            LinkedIn in a more accessible and eventually searchable/filterable
-            place. This will make advice easier to find, and I will also be
-            expanding on certain projects (such as my #buildinpublic project
-            starting January).
+            Welcome! This space will contain my writing from LinkedIn in a more
+            accessible and eventually searchable/filterable place. This will
+            make advice easier to find, and I will also be expanding on certain
+            projects (such as my #buildinpublic project starting January).
           </p>
         </div>
         <div>
