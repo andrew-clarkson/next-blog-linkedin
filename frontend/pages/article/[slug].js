@@ -21,7 +21,7 @@ const Article = ({ article, categories }) => {
       <Seo seo={seo} />
       <div
         id="banner"
-        className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
+        className="uk-height-medium uk-flex uk-container uk-flex-middle uk-margin"
         // data-src={imageUrl}
         // data-srcset={imageUrl}
         data-uk-img
@@ -29,26 +29,37 @@ const Article = ({ article, categories }) => {
         <h1>{article.attributes.title}</h1>
       </div>
       <div className="uk-section">
-        <div className="uk-container uk-container-small">
+        <div className="uk-container ">
           <ReactMarkdown
             source={article.attributes.content}
             escapeHtml={false}
           />
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
-            {/* <div>
-              {article.attributes.author.picture && (
-                <NextImage image={article.attributes.author.picture} />
-              )}
-            </div> */}
             <div className="uk-width-expand">
-              <p className="uk-margin-remove-bottom">
-                By {article.attributes.author.name}
-              </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">
-                  {article.attributes.published_at}
-                </Moment>
+              <p className="uk-text-italic uk-text-small uk-margin-remove-top">
+                {article.attributes.linkedinpostdate ? (
+                  <div>
+                    Originally posted on LinkedIn on:{" "}
+                    <Moment format="MMM Do YYYY">
+                      {article.attributes.linkedinpostdate}
+                    </Moment>
+                  </div>
+                ) : (
+                  <div>
+                    Created on:{" "}
+                    <Moment format="MMM Do YYYY">
+                      {article.attributes.published_at}
+                    </Moment>
+                  </div>
+                )}
+                {article.attributes.linkedinurl && (
+                  <div>
+                    <a href={article.attributes.linkedinurl}>
+                      See the full conversation here
+                    </a>
+                  </div>
+                )}
               </p>
             </div>
           </div>

@@ -21,7 +21,7 @@ const Home = ({ articles, categories, homepage }) => {
 export async function getStaticProps() {
   // Run API calls in parallel
   const [articlesRes, categoriesRes, homepageRes] = await Promise.all([
-    fetchAPI("/articles", { populate: "*" }),
+    fetchAPI("/articles", { populate: "*" }), //sort here breaks single article views
     fetchAPI("/categories", { populate: "*" }),
     fetchAPI("/homepage", {
       populate: {
