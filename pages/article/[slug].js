@@ -18,7 +18,7 @@ const Article = ({ article, categories }) => {
       <div id="banner" className="uk-container uk-container-large" data-uk-img>
         <h1>{article.attributes.title}</h1>
       </div>
-      <div className="uk-section uk-padding-remove-top">
+      <div className="uk-section uk-padding-small-top">
         <div className="uk-container uk-container-large uk-margin-remove make-narrow">
           <ReactMarkdown
             source={article.attributes.content}
@@ -27,7 +27,7 @@ const Article = ({ article, categories }) => {
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div className="uk-width-expand">
-              <p className="uk-text-italic uk-text-small uk-margin-remove-top">
+              <p className="uk-text-italic uk-text-small">
                 {article.attributes.linkedinpostdate ? (
                   <div>
                     Originally posted on LinkedIn on:{" "}
