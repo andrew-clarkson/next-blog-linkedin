@@ -41,14 +41,14 @@ const Article = ({ article, categories }) => {
                 {article.attributes.linkedinpostdate ? (
                   <div>
                     Originally posted on LinkedIn on:{" "}
-                    <Moment format="MMM Do YYYY">
+                    <Moment format="MMMM Do, YYYY">
                       {article.attributes.linkedinpostdate}
                     </Moment>
                   </div>
                 ) : (
                   <div>
                     Created on:{" "}
-                    <Moment format="MMM Do YYYY">
+                    <Moment format="MMMM Do, YYYY">
                       {article.attributes.published_at}
                     </Moment>
                   </div>
