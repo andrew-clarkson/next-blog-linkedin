@@ -19,6 +19,17 @@ h1 {
   }
 }
 
+@media only screen and (max-width: 640px) {
+  .two-col {
+    display: none
+  }
+}
+
+@media only screen and (min-width: 641px) {
+  .one-col {
+    display: none
+  }
+}
 
 #category {
   font-family: Staatliches;
@@ -51,3 +62,8 @@ img:hover {
   opacity: 1;
   transition: opacity 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
+
+.min-height {
+  min-height: 250px
+}
+

@@ -4,8 +4,8 @@ import Card from "./card"
 const Articles = ({ articles }) => {
   articles.sort((a, b) => a.id - b.id).reverse()
   const leftArticlesCount = Math.ceil(articles.length / 5)
-  const leftArticles = articles.slice(0, leftArticlesCount)
-  const rightArticles = articles.slice(leftArticlesCount, articles.length)
+  const leftArticles = articles.filter((article) => article.id % 2 === 0)
+  const rightArticles = articles.filter((article) => article.id % 2 !== 0)
 
   const welcome = (
     <div>
@@ -60,7 +60,8 @@ const Articles = ({ articles }) => {
   return (
     <div>
       {welcome}
-      <div className="uk-child-width-1-2@s" data-uk-grid="true">
+      {/* displays on larger breakpoint only, 2 cols, resets order */}
+      <div className="uk-child-width-1-2@s two-col" data-uk-grid="true">
         <div>
           {leftArticles.map((article, i) => {
             return (
@@ -72,7 +73,7 @@ const Articles = ({ articles }) => {
           })}
         </div>
         <div>
-          <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+          <div className="" data-uk-grid>
             {rightArticles.map((article, i) => {
               return (
                 <Card
@@ -83,6 +84,13 @@ const Articles = ({ articles }) => {
             })}
           </div>
         </div>
+      </div>
+
+      {/* displays on smaller breakpoint only, 1 col, resets order */}
+      <div className="one-col">
+        {articles.map((article, i) => {
+          return <Card article={article} key={article.attributes.slug} />
+        })}
       </div>
     </div>
   )
