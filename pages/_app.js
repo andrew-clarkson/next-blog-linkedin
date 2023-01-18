@@ -3,7 +3,8 @@ import Head from "next/head"
 import "../assets/css/style.css"
 import { createContext } from "react"
 import { fetchAPI } from "../lib/api"
-// import { getStrapiMedia } from "../lib/media"
+import Script from "next/script"
+import { GoogleAnalytics } from "nextjs-google-analytics"
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({})
@@ -19,6 +20,8 @@ const MyApp = ({ Component, pageProps }) => {
           // href={getStrapiMedia(global.attributes.favicon)}
         />
       </Head>
+      <GoogleAnalytics gaMeasurementId={process.env.GA_ID} trackPageViews />
+
       <GlobalContext.Provider value={global.attributes}>
         <Component {...pageProps} />
       </GlobalContext.Provider>
