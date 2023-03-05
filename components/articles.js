@@ -41,11 +41,6 @@ const Articles = ({ articles }) => {
               </a>
               {" (every other Thursday @7pm)"}
             </li>
-            <li>
-              <a href="https://introwise.com/andrew-clarkson">
-                Land your first Developer role quicker!
-              </a>
-            </li>
           </ul>
         </div>
       </div>
